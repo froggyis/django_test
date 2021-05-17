@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{%block content %}
+<h1>OGproduct name:{{object.title}}</h1>
+
+<p>
+{% if object.description %} 
+	description:{{obj.description}} 
+{% else %} 
+
+description coming soon
+
+{% endif %}
+
+
+</p>
+<h2>{{object.price}}</h2>
+{% endblock %}

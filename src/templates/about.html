@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>About</h1>
+<p>This is a templates</p>
+<h3>{{ title |capfirst }}</h3>
+
+<p>
+{{ my_number }} ,
+{{ my_list }}
+</p>
+
+
+<ul>
+	<li>Item 1</li>
+	<li>Item 2</li>
+</ul>
+
+
+<ul>
+{% for i in my_list %}
+
+
+	{% if i == 123 %}
+		<li>  {{forloop.counter}} - {{i|add:100}}  </li>
+	{% endif %}
+	<li>  {{forloop.counter}} - {{i}}  </li>
+
+
+{% endfor %}
+</ul>
+
+
+
+{% endblock %}
